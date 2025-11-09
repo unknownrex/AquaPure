@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg ap-topbar border-bottom">
+  <div class="container-fluid px-2 px-md-4">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center me-0 me-md-4" href="#">
+      <img src="../assets/img/app-logo-full.png" alt="AquaPure Logo" width="150" class="me-2">
+    </a>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Search (center on desktop, top on mobile) -->
+      <form class="d-flex mx-auto my-3 my-lg-0 ap-search" role="search">
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-search"></i>
+          </span>
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </div>
+      </form>
+
+      <!-- Right side items -->
+      <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+        <!-- Location -->
+        <li class="nav-item dropdown mx-1 mx-md-2">
+          <a class="nav-link dropdown-toggle ap-navlink" href="#" id="locationDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-geo-alt"></i> <span class="d-none d-sm-inline">Kolam Taman</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Kolam Taman</a></li>
+            <li><a class="dropdown-item" href="#">Kolam Belakang</a></li>
+          </ul>
+        </li>
+
+        <!-- Device -->
+        <li class="nav-item dropdown mx-1 mx-md-2">
+          <a class="nav-link dropdown-toggle ap-navlink" href="#" id="deviceDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-broadcast-pin"></i> <span class="d-none d-sm-inline">Device-01</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Device-01</a></li>
+            <li><a class="dropdown-item" href="#">Device-02</a></li>
+          </ul>
+        </li>
+
+        <!-- Profile -->
+        <li class="nav-item dropdown mx-1 mx-md-2">
+          <a class="nav-link dropdown-toggle ap-navlink p-0 align-items-center d-flex" href="#" id="profileDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/img/profile.jpeg" class="rounded-circle" width="36" height="36" alt="User Avatar">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profil</a></li>
+            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Keluar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

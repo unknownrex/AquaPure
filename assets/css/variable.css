@@ -1,0 +1,25 @@
+:root {
+  /* ===== Brand ===== */
+  --color-primary: #37ACFF;
+
+  /* ===== Backgrounds ===== */
+  --color-bg: #F8FDFF;
+  --color-bg-secondary: #F0F6F9;
+  --color-border: #DBE3E5;
+
+  /* ===== Text ===== */
+  --color-text: #2F3436;
+  --color-secondary-text: #869097;
+  --color-muted: #2F3436;
+
+  /* ===== Status & Feedback ===== */
+  --color-success: #44D241;
+  --color-warning: #FFC107;
+  --color-danger: #EC4242;
+
+  /* ===== Sensor Theme ===== */
+  --color-phlevel: #9D7CFF;
+  --color-turbidity: #7CCDFF;
+  --color-temperature: #FFBD53;
+  --color-oxygen: #57C34D;
+}

@@ -1,0 +1,117 @@
+.ap-topbar {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  min-height: 70px;
+  z-index: 1030;
+}
+
+.ap-navlink {
+  color: var(--color-secondary-text) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.ap-navlink:hover {
+  color: var(--color-text) !important;
+}
+
+.ap-search {
+  max-width: 520px;
+}
+
+.ap-search .input-group-text {
+  background-color: #fff;
+  border-color: var(--color-border);
+  border-right: 0;
+  color: var(--color-secondary-text);
+}
+
+.ap-search .form-control {
+  background-color: #fff;
+  border-color: var(--color-border);
+  border-left: 0;
+  color: var(--color-text);
+}
+
+.ap-search .form-control::placeholder {
+  color: var(--color-secondary-text);
+}
+
+.ap-search .input-group-text,
+.ap-search .form-control {
+  border-radius: 10px;
+}
+
+.ap-search .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ap-search .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-menu {
+  border-color: var(--color-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-item {
+  color: var(--color-text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(55, 172, 255, 0.25);
+}
+
+/* --- Mobile Layout Fixes --- */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--color-bg);
+
+    border-top: 1px solid var(--color-border);
+
+    text-align: center;
+  }
+
+  .ap-search {
+    margin: 0 auto 1rem auto;
+    width: 90%;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    box-shadow: none;
+    margin-top: 0.25rem;
+    background-color: transparent;
+  }
+
+  .navbar-nav .dropdown-item {
+    padding: 0.4rem 1rem;
+  }
+
+  .navbar-nav .dropdown-toggle {
+    justify-content: center;
+  }
+
+  .navbar-nav .dropdown-toggle::after {
+    margin-left: 0.4rem;
+  }
+}

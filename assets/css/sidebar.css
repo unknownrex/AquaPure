@@ -1,0 +1,80 @@
+.sidebar {
+   background-color: var(--color-bg);
+   position: fixed;
+   top: 70px;
+   left: 0;
+   height: calc(100vh - 70px);
+   overflow-y: auto;
+   z-index: 1030;
+}
+
+.nav-link {
+    color: var(--color-secondary-text) !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav-link:hover {
+   background-color: #37acff0c !important;
+   color: #37acff8c !important;
+}
+
+/* Active link background and text/icon color */
+.nav-link.active {
+   background-color: var(--color-bg-primary-transparent) !important;
+   color: var(--color-primary) !important;
+}
+.nav-link.active:hover {
+   background-color: var(--color-bg-primary-transparent) !important;
+   color: var(--color-primary) !important;
+}
+.nav-link.active i {
+   color: var(--color-primary) !important;
+   transition: color 0.2s ease;
+}
+.nav-link:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+/* Notification badge dot */
+.badge-dot {
+   position: absolute;
+   top: 50%;
+   right: 12px;
+   transform: translate(20%, -10%);
+   width: 8px;
+   height: 8px;
+   background-color: var(--color-primary);
+   border-radius: 50%;
+}
+
+/* Sidebar width for >= 768px */
+@media (min-width: 768px) {
+   .sidebar {
+      width: 280px;
+   }
+   .sidebar .nav-link {
+      width: 100%;
+   }
+}
+
+/* Sidebar width for < 768px - icon only */
+@media (max-width: 767.98px) {
+   .sidebar {
+      width: 70px;
+      text-align: center;
+   }
+   .sidebar .nav-link {
+      justify-content: center !important;
+      padding: 0.75rem 0;
+      position: relative;
+   }
+   .sidebar .nav-link span.text-label {
+      display: none !important;
+   }
+   .sidebar .nav-link .badge-dot {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transform: none;
+   }
+}

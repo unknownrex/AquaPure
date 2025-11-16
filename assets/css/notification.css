@@ -1,0 +1,32 @@
+/* Notification Styles */
+.notif-text {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.notif-date {
+    font-size: 1.2rem;
+    color: var(--color-muted);
+}
+
+/* Notification card responsive */
+@media (max-width: 767.98px) {
+    .notif-card .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .notif-card .icon-box {
+        margin-bottom: 0.75rem;
+        align-self: flex-start;
+    }
+    
+    .notif-card .ps-3 {
+        padding-left: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .notif-card .ms-auto {
+        margin-left: 0 !important;
+    }
+}

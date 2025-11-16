@@ -2,7 +2,11 @@
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   min-height: 70px;
-  z-index: 1030;
+  z-index: 1040;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .ap-navlink {

@@ -1,0 +1,33 @@
+body {
+    background-color: var(--color-bg-secondary);
+    overflow: hidden;
+    border-color: var(--color-border);
+    color: var(--color-text) !important;
+}
+
+.text-muted {
+    color: var(--color-muted) !important;
+}
+
+.main-content {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Sidebar width for >= 768px */
+@media (min-width: 768px) {
+    .main-content {
+        left: 280px;
+    }
+}
+
+/* Sidebar width for < 768px - icon only */
+@media (max-width: 767.98px) {
+    .main-content {
+        left: 70px;
+    }
+}

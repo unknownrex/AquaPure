@@ -1,0 +1,9 @@
+/* Status Card Styles */
+.icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

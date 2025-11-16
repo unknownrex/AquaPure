@@ -1,25 +1,22 @@
 :root {
-  /* ===== Brand ===== */
-  --color-primary: #37ACFF;
-
-  /* ===== Backgrounds ===== */
-  --color-bg: #F8FDFF;
-  --color-bg-secondary: #F0F6F9;
-  --color-border: #DBE3E5;
-
-  /* ===== Text ===== */
-  --color-text: #2F3436;
-  --color-secondary-text: #869097;
-  --color-muted: #2F3436;
-
-  /* ===== Status & Feedback ===== */
-  --color-success: #44D241;
-  --color-warning: #FFC107;
-  --color-danger: #EC4242;
-
-  /* ===== Sensor Theme ===== */
-  --color-phlevel: #9D7CFF;
-  --color-turbidity: #7CCDFF;
-  --color-temperature: #FFBD53;
-  --color-oxygen: #57C34D;
+   /* ===== Brand ===== */
+   --color-primary: #37acff; /* ===== Backgrounds ===== */
+   --color-bg: #f8fdff;
+   --color-bg-secondary: #f0f6f9;
+   --color-bg-primary-transparent: #37acff21;
+   --color-border: #dbe3e5; /* ===== Text ===== */
+   --color-text: #2f3436;
+   --color-secondary-text: #515C61;
+   --color-muted: #B4BCC1; /* ===== Status & Feedback ===== */
+   --color-success: #44d241;
+   --color-warning: #ffc107;
+   --color-danger: #ec4242; /* ===== Sensor Theme ===== */
+   --color-phlevel: #9d7cff;
+   --color-phlevel-bg: #9d7cff26;
+   --color-turbidity: #7ccdff;
+   --color-turbidity-bg: #7ccdff26;
+   --color-temperature: #ffbd53;
+   --color-temperature-bg: #ffbd5326;
+   --color-oxygen: #57c34d;
+   --color-oxygen-bg: #57c34d26;
 }

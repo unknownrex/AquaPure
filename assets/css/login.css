@@ -1,6 +1,6 @@
 /* Login Page Styles */
 .login-page {
-   background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+   background: var(--color-bg-secondary);
    min-height: 100vh;
 }
 
@@ -9,13 +9,13 @@
    border: 1px solid var(--color-border);
    border-radius: 12px;
    padding: 2.5rem;
-   box-shadow: 0 4px 6px rgba(55, 172, 255, 0.1);
+   box-shadow: 0 4px 6px var(--color-bg-primary-transparent);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .login-card:hover {
    transform: translateY(-2px);
-   box-shadow: 0 8px 12px rgba(55, 172, 255, 0.2);
+   box-shadow: 0 8px 12px var(--color-bg-primary-transparent);
 }
 
 .login-logo {
@@ -71,7 +71,7 @@
 
 .form-control.is-invalid:focus {
    border-color: var(--color-danger);
-   box-shadow: 0 0 0 0.2rem rgba(236, 66, 66, 0.15);
+   box-shadow: 0 0 0 0.2rem var(--color-danger-bg);
    background-image: none;
 }
 
@@ -117,7 +117,8 @@
 }
 
 .login-btn:hover {
-   background: #2b92d9;
+   background: var(--color-primary);
+   opacity: 0.9;
    transform: translateY(-2px);
 }
 
@@ -129,7 +130,7 @@
 .alert-danger {
    border-radius: 8px;
    border: none;
-   background: #fce4e4;
+   background: var(--color-danger-bg);
    color: var(--color-danger);
    padding: 0.75rem 1rem;
    font-size: 0.95rem;

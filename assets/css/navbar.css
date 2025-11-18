@@ -7,6 +7,12 @@
   top: 0;
   left: 0;
   right: 0;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.ap-topbar:empty {
+  opacity: 0;
 }
 
 .ap-navlink {
@@ -26,14 +32,14 @@
 }
 
 .ap-search .input-group-text {
-  background-color: #fff;
+  background-color: var(--color-bg);
   border-color: var(--color-border);
   border-right: 0;
   color: var(--color-secondary-text);
 }
 
 .ap-search .form-control {
-  background-color: #fff;
+  background-color: var(--color-bg);
   border-color: var(--color-border);
   border-left: 0;
   color: var(--color-text);
@@ -60,7 +66,30 @@
 
 .dropdown-menu {
   border-color: var(--color-border);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(47, 52, 54, 0.06);
+}
+
+.scrollable-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.scrollable-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 10px;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-text);
 }
 
 .dropdown-item {
@@ -72,7 +101,7 @@
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.15rem rgba(55, 172, 255, 0.25);
+  box-shadow: 0 0 0 0.15rem var(--color-bg-primary-transparent);
 }
 
 /* --- Mobile Layout Fixes --- */

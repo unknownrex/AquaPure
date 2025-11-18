@@ -23,17 +23,16 @@
         </div>
       </form>
 
-      <!-- Right side items -->
+
       <ul class="navbar-nav ms-lg-auto align-items-lg-center">
         <!-- Location -->
         <li class="nav-item dropdown mx-1 mx-md-2">
           <a class="nav-link dropdown-toggle ap-navlink" href="#" id="locationDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-geo-alt"></i> <span class="d-none d-sm-inline">Kolam Taman</span>
+            <i class="bi bi-geo-alt"></i> <span class="d-none d-sm-inline">Main water tank</span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Kolam Taman</a></li>
-            <li><a class="dropdown-item" href="#">Kolam Belakang</a></li>
+          <ul class="dropdown-menu dropdown-menu-end scrollable-dropdown" id="locationDropdownMenu">
+
           </ul>
         </li>
 
@@ -43,9 +42,8 @@
             data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-broadcast-pin"></i> <span class="d-none d-sm-inline">Device-01</span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Device-01</a></li>
-            <li><a class="dropdown-item" href="#">Device-02</a></li>
+          <ul class="dropdown-menu dropdown-menu-end scrollable-dropdown" id="deviceDropdownMenu">
+
           </ul>
         </li>
 
@@ -53,13 +51,10 @@
         <li class="nav-item dropdown mx-1 mx-md-2">
           <a class="nav-link dropdown-toggle ap-navlink p-0 align-items-center d-flex" href="#" id="profileDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../assets/img/profile.jpeg" class="rounded-circle" width="36" height="36" alt="User Avatar">
+            <img src="../assets/img/default_profile.png" class="rounded-circle" width="36" height="36" alt="User Avatar">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Profil</a></li>
-            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">Keluar</a></li>
+            <li><a class="dropdown-item text-danger" href="../index.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
           </ul>
         </li>
       </ul>

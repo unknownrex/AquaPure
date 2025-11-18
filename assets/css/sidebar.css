@@ -6,6 +6,12 @@
    height: calc(100vh - 70px);
    overflow-y: auto;
    z-index: 1030;
+   opacity: 1;
+   transition: opacity 0.15s ease-in-out;
+}
+
+.sidebar:empty {
+   opacity: 0;
 }
 
 .nav-link {
@@ -13,8 +19,8 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 .nav-link:hover {
-   background-color: #37acff0c !important;
-   color: #37acff8c !important;
+   background-color: var(--color-bg-primary-transparent) !important;
+   color: var(--color-primary) !important;
 }
 
 /* Active link background and text/icon color */

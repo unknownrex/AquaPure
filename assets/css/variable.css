@@ -1,16 +1,18 @@
 :root {
-   /* ===== Brand ===== */
-   --color-primary: #37acff; /* ===== Backgrounds ===== */
+   --color-primary: #37acff;
    --color-bg: #f8fdff;
    --color-bg-secondary: #f0f6f9;
    --color-bg-primary-transparent: #37acff21;
-   --color-border: #dbe3e5; /* ===== Text ===== */
+   --color-border: #dbe3e5;
    --color-text: #2f3436;
+   --color-text-white: #f8fdff;
    --color-secondary-text: #515C61;
-   --color-muted: #B4BCC1; /* ===== Status & Feedback ===== */
+   --color-muted: #B4BCC1;
    --color-success: #44d241;
+   --color-success-bg: #44d24126;
    --color-warning: #ffc107;
-   --color-danger: #ec4242; /* ===== Sensor Theme ===== */
+   --color-danger: #ec4242;
+   --color-danger-bg: #ec424226;
    --color-phlevel: #9d7cff;
    --color-phlevel-bg: #9d7cff26;
    --color-turbidity: #7ccdff;

@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     legend: { display: false },
                     tooltip: {
                         enabled: true,
-                        backgroundColor: "#0f172a",
+                        backgroundColor: "#1a2535a1",
                         titleColor: "#e5e7eb",
                         bodyColor: "#e5e7eb",
                         cornerRadius: 10,
@@ -71,15 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // DATA DUMMY 7 HARI
     const phData = [7.3, 7.1, 7.2, 7.25, 7.0, 7.4, 7.2];
     const tempData = [24.5, 25, 24.8, 25.3, 24.0, 25.8, 25.1];
     const oxygenData = [7.6, 7.3, 7.4, 7.5, 7.1, 7.9, 7.6];
     const turbidityData = [0.6, 0.5, 0.55, 0.52, 0.48, 0.7, 0.5];
 
-    // WARNA (RGBA, alpha=1 untuk border)
-    createLineChart("phChart", phData, "rgba(124, 92, 255, 1)");
-    createLineChart("tempChart", tempData, "rgba(255, 163, 72, 1)");
-    createLineChart("oxygenChart", oxygenData, "rgba(16, 185, 129, 1)");
-    createLineChart("turbidityChart", turbidityData, "rgba(59, 130, 246, 1)");
+    createLineChart("phChart", phData, "rgba(157, 124, 255, 1)");
+    createLineChart("tempChart", tempData, "rgba(255, 189, 83, 1)");
+    createLineChart("oxygenChart", oxygenData, "rgba(87, 195, 77, 1)");
+    createLineChart("turbidityChart", turbidityData, "rgba(124, 205, 255, 1)");
 });

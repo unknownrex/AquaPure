@@ -1,12 +1,39 @@
-$(function(){ $("#navbar").load("../partials/_navbar.html"); });
+$(function(){ 
+   $("#navbar").load("../partials/_navbar.html"); 
+});
 $(function(){ 
    $("#sidebar").load("../partials/_sidebar.html", function() {
-      initScrollSpy();
+      initScrollTracker();
+      handleHashNavigation();
    }); 
 });
 
-// Scroll Spy Functionality
-function initScrollSpy() {
+// Handle hash navigation on page load
+function handleHashNavigation() {
+   const hash = window.location.hash;
+   if (hash) {
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+         setTimeout(function() {
+            targetSection.scrollIntoView({ 
+               behavior: 'smooth',
+               block: 'start'
+            });
+            
+            if (typeof setActiveNavLink === 'function') {
+               setActiveNavLink();
+            }
+         }, 300);
+      }
+   } else {
+      if (typeof setActiveNavLink === 'function') {
+         setActiveNavLink();
+      }
+   }
+}
+
+// Scroll Tracker Functionality
+function initScrollTracker() {
    const sections = document.querySelectorAll('h1[id]');
    const navLinks = document.querySelectorAll('.sidebar .nav-link');
    const mainContent = document.querySelector('.main-content');
@@ -14,65 +41,58 @@ function initScrollSpy() {
    let isScrolling = false;
    let scrollTimeout;
    
-   // Smooth scroll on click
    navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
          const href = this.getAttribute('href');
-         if (href && href.startsWith('#')) {
-            e.preventDefault();
-            const targetId = href.substring(1);
-            const targetSection = document.getElementById(targetId);
+         
+         if (href && href.includes('#')) {
+            const hashPart = href.split('#')[1];
+            const currentPage = window.location.pathname.split('/').pop();
+            const linkPage = href.split('#')[0] || currentPage;
             
-            if (targetSection) {
-               // Set flag to prevent scroll spy during smooth scroll
-               isScrolling = true;
+            if (!linkPage || linkPage === currentPage || linkPage === '') {
+               e.preventDefault();
+               const targetSection = document.getElementById(hashPart);
                
-               // Remove active class from all links
-               navLinks.forEach(l => l.classList.remove('active'));
-               // Add active class to clicked link immediately
-               this.classList.add('active');
-               
-               // Smooth scroll to section
-               targetSection.scrollIntoView({ 
-                  behavior: 'smooth',
-                  block: 'start'
-               });
-               
-               // Re-enable scroll spy after smooth scroll completes
-               setTimeout(function() {
-                  isScrolling = false;
-               }, 1000);
+               if (targetSection) {
+                  isScrolling = true;
+                  
+                  navLinks.forEach(l => l.classList.remove('active'));
+                  this.classList.add('active');
+                  
+                  targetSection.scrollIntoView({ 
+                     behavior: 'smooth',
+                     block: 'start'
+                  });
+                  
+                  setTimeout(function() {
+                     isScrolling = false;
+                  }, 1000);
+               }
             }
          }
       });
    });
    
-   // Update active state on scroll
-   if (mainContent) {
+   if (mainContent && sections.length > 0) {
       mainContent.addEventListener('scroll', function() {
-         // Skip scroll spy if currently smooth scrolling
          if (isScrolling) {
             return;
          }
          
-         // Clear existing timeout
          clearTimeout(scrollTimeout);
          
-         // Debounce scroll event
          scrollTimeout = setTimeout(function() {
             let current = '';
             const scrollPos = mainContent.scrollTop;
             const containerHeight = mainContent.clientHeight;
             const scrollHeight = mainContent.scrollHeight;
             
-            // Check if scrolled to bottom
             if (scrollPos + containerHeight >= scrollHeight - 50) {
-               // Get the last section
                if (sections.length > 0) {
                   current = sections[sections.length - 1].getAttribute('id');
                }
             } else {
-               // Normal scroll detection
                sections.forEach(section => {
                   const sectionTop = section.offsetTop;
                   
@@ -85,10 +105,14 @@ function initScrollSpy() {
             navLinks.forEach(link => {
                link.classList.remove('active');
                const href = link.getAttribute('href');
-               if (href === '#' + current) {
+               if (href && href.includes('#' + current)) {
                   link.classList.add('active');
                }
             });
+            
+            if (current && window.location.hash !== '#' + current) {
+               history.replaceState(null, null, '#' + current);
+            }
          }, 100);
       });
    }

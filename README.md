@@ -34,7 +34,7 @@ AquaPure/
 ## Technology Stack
 
 - Bootstrap 5.3.3
-- jQuery 3.7.1
+- Javascript
 - Custom CSS
 
 ## Future Features

@@ -70,7 +70,17 @@ function setRoleFilter(role) {
    document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.classList.remove('active');
       btn.style.backgroundColor = 'transparent';
-      btn.style.color = 'var(--color-primary)';
+      
+      if (btn.id === 'filterAll') {
+         btn.style.color = 'var(--color-primary)';
+         btn.style.borderColor = 'var(--color-primary)';
+      } else if (btn.id === 'filterAdmin') {
+         btn.style.color = 'var(--color-primary)';
+         btn.style.borderColor = 'var(--color-primary)';
+      } else if (btn.id === 'filterUser') {
+         btn.style.color = 'var(--color-secondary-text)';
+         btn.style.borderColor = 'var(--color-secondary-text)';
+      }
    });
    
    const activeBtn = document.getElementById('filter' + role.charAt(0).toUpperCase() + role.slice(1));
@@ -78,6 +88,7 @@ function setRoleFilter(role) {
       activeBtn.classList.add('active');
       activeBtn.style.backgroundColor = 'var(--color-primary)';
       activeBtn.style.color = 'white';
+      activeBtn.style.borderColor = 'var(--color-primary)';
    }
    
    displayUserList(role, currentSearch);

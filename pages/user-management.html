@@ -37,13 +37,13 @@
                         <input type="text" class="form-control" id="userSearch" placeholder="Search users..." style="border-color: var(--color-border);" />
                      </div>
                      <button class="btn btn-sm filter-btn active" id="filterAll" onclick="setRoleFilter('all')" style="background-color: var(--color-primary); color: var(--color-bg); border: 1px solid var(--color-primary);">
-                        <i class="bi bi-list-ul me-1"></i>All Devices
+                        <i class="bi bi-list-ul me-1"></i>All Users
                      </button>
-                     <button class="btn btn-sm filter-btn" id="filterAdmin" onclick="setRoleFilter('admin')" style="background-color: transparent; color: var(--color-success); border: 1px solid var(--color-success);">
-                        <i class="bi bi-check-circle me-1"></i>Active Only
+                     <button class="btn btn-sm filter-btn" id="filterAdmin" onclick="setRoleFilter('admin')" style="background-color: transparent; color: var(--color-primary); border: 1px solid var(--color-primary);">
+                        <i class="bi bi-shield-check me-1"></i>Admin Only
                      </button>
-                     <button class="btn btn-sm filter-btn" id="filterUser" onclick="setRoleFilter('user')" style="background-color: transparent; color: var(--color-danger); border: 1px solid var(--color-danger);">
-                        <i class="bi bi-x-circle me-1"></i>Inactive Only
+                     <button class="btn btn-sm filter-btn" id="filterUser" onclick="setRoleFilter('user')" style="background-color: transparent; color: var(--color-secondary-text); border: 1px solid var(--color-secondary-text);">
+                        <i class="bi bi-person me-1"></i>User Only
                      </button>
                   </div>
                   <button class="btn ap-btn" onclick="addUser()">

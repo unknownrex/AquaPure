@@ -1,4 +1,4 @@
-// Function to render user table
+// Function to display user table
 function displayUserList(roleFilter = 'all', search = '') {
    const tbody = document.getElementById('userTableBody');
    tbody.innerHTML = '';
@@ -87,7 +87,7 @@ function setRoleFilter(role) {
    if (activeBtn) {
       activeBtn.classList.add('active');
       activeBtn.style.backgroundColor = 'var(--color-primary)';
-      activeBtn.style.color = 'white';
+      activeBtn.style.color = 'var(--color-bg)';
       activeBtn.style.borderColor = 'var(--color-primary)';
    }
    

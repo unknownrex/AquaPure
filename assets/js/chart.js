@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     pointRadius: 0,
                     pointHoverRadius: 6,
                     pointHoverBackgroundColor: borderColor,
-                    pointHoverBorderColor: "#fff",
+                    pointHoverBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-bg').trim(),
                     pointHoverBorderWidth: 2,
                 }]
             },

@@ -11,6 +11,7 @@
 
 body {
    font-family: "Poppins", sans-serif;
+   background-color: var(--color-bg-secondary);
 }
 
 /* Prevent flash of unstyled content */
@@ -27,6 +28,7 @@ body {
 
 /* Card Styles */
 .card {
+   background-color: var(--color-bg);
    border: 1px solid var(--color-border);
    padding: 16px;
    border-radius: 8px;
@@ -86,4 +88,113 @@ body {
    background-color: var(--color-primary);
    color: var(--color-bg);
    border: 1px solid var(--color-primary);
+   transition: all 0.3s ease;
+}
+
+.ap-btn:hover {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   color: var(--color-bg);
+   opacity: 0.85;
+   transform: translateY(-2px);
+}
+
+.ap-btn:active {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   color: var(--color-bg);
+   opacity: 0.9;
+   transform: translateY(0);
+}
+
+.ap-btn:focus {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   color: var(--color-bg);
+   box-shadow: 0 0 0 0.2rem var(--color-bg-primary-transparent);
+}
+
+/* Primary Button Styles */
+.btn-primary {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   opacity: 0.85;
+   transform: translateY(-2px);
+}
+
+.btn-primary:active {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   opacity: 0.9;
+   transform: translateY(0);
+}
+
+.btn-primary:focus {
+   background-color: var(--color-primary);
+   border-color: var(--color-primary);
+   box-shadow: 0 0 0 0.2rem var(--color-bg-primary-transparent);
+}
+
+/* Global Form Control Styles */
+.form-control,
+.form-select {
+   background-color: var(--color-bg);
+   border-color: var(--color-border);
+   color: var(--color-text);
+}
+
+.form-control:focus,
+.form-select:focus {
+   background-color: var(--color-bg);
+   border-color: var(--color-primary);
+   box-shadow: 0 0 0 0.2rem var(--color-bg-primary-transparent);
+   color: var(--color-text);
+}
+
+.input-group-text {
+   background-color: var(--color-bg);
+   border-color: var(--color-border);
+   color: var(--color-text);
+}
+
+/* Table Styles */
+.table {
+   background-color: var(--color-bg);
+   color: var(--color-text);
+   --bs-table-bg: var(--color-bg);
+   --bs-table-hover-bg: var(--color-bg-secondary);
+   --bs-table-striped-bg: var(--color-bg-secondary);
+}
+
+.table thead {
+   background-color: var(--color-bg-secondary);
+}
+
+.table tbody tr {
+   background-color: var(--color-bg);
+}
+
+.table-hover tbody tr:hover {
+   background-color: var(--color-bg-secondary);
+   color: var(--color-text);
+}
+
+/* Modal Styles */
+.modal-content {
+   background-color: var(--color-bg);
+   border-color: var(--color-border);
+}
+
+.modal-header {
+   border-bottom-color: var(--color-border);
+}
+
+.modal-footer {
+   border-top-color: var(--color-border);
 }

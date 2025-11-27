@@ -21,10 +21,20 @@
   align-items: center;
   gap: 0.35rem;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .ap-navlink:hover {
   color: var(--color-text) !important;
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+}
+
+.dropdown-toggle.show,
+.ap-navlink.show {
+  color: var(--color-text) !important;
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
 }
 
 .ap-search {

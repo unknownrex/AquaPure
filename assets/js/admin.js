@@ -175,15 +175,15 @@ function setFilter(filter) {
    if (filter === 'all') {
       filterAll.classList.add('active');
       filterAll.style.backgroundColor = 'var(--color-primary)';
-      filterAll.style.color = 'white';
+      filterAll.style.color = 'var(--color-bg)';
    } else if (filter === 'active') {
       filterActive.classList.add('active');
       filterActive.style.backgroundColor = 'var(--color-success)';
-      filterActive.style.color = 'white';
+      filterActive.style.color = 'var(--color-bg)';
    } else if (filter === 'inactive') {
       filterInactive.classList.add('active');
       filterInactive.style.backgroundColor = 'var(--color-danger)';
-      filterInactive.style.color = 'white';
+      filterInactive.style.color = 'var(--color-bg)';
    }
    
    displayDeviceList(filter, currentSearch);
